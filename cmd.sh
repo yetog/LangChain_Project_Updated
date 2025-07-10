@@ -1,0 +1,81 @@
+
+
+(set up main)
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+npx expo install expo-speech expo-av
+python3 main.py
+
+
+
+(set up api + models)
+
+nano .env
+
+IONOS_CHAT_MODEL_ID=0b6c4a15-bb8d-4092-82b0-f357b77c59fd
+IONOS_IMAGE_MODEL_ID=stabilityai/stable-diffusion-xl-base-1.0
+
+IONOS_API_KEY=eyJ0eXAiOiJKV1QiLCJraWQiOiJhM2YzMzk5NC1lYzI2LTRiMjEtYjhmYy01N2U5YWRmNDhkZDkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNzQyODMzNzEwLCJjbGllbnQiOiJVU0VSIiwiaWRlbnRpdHkiOnsicHJpdmlsZWdlcyI6WyJEQVRBX0NFTlRFUl9DUkVBVEUiLCJTTkFQU0hPVF9DUkVBVEUiLCJJUF9CTE9DS19SRVNFUlZFIiwiTUFOQUdFX0RBVEFQTEFURk9STSIsIkFDQ0VTU19BQ1RJVklUWV9MT0ciLCJQQ0NfQ1JFQVRFIiwiQUNDRVNTX1MzX09CSkVDVF9TVE9SQUdFIiwiQkFDS1VQX1VOSVRfQ1JFQVRFIiwiQ1JFQVRFX0lOVEVSTkVUX0FDQ0VTUyIsIks4U19DTFVTVEVSX0NSRUFURSIsIkZMT1dfTE9HX0NSRUFURSIsIkFDQ0VTU19BTkRfTUFOQUdFX01PTklUT1JJTkciLCJBQ0NFU1NfQU5EX01BTkFHRV9DRVJUSUZJQ0FURVMiLCJBQ0NFU1NfQU5EX01BTkFHRV9MT0dHSU5HIiwiTUFOQUdFX0RCQUFTIiwiQUNDRVNTX0FORF9NQU5BR0VfRE5TIiwiTUFOQUdFX1JFR0lTVFJZIiwiQUNDRVNTX0FORF9NQU5BR0VfQ0ROIiwiQUNDRVNTX0FORF9NQU5BR0VfVlBOIiwiQUNDRVNTX0FORF9NQU5BR0VfQVBJX0dBVEVXQVkiLCJBQ0NFU1NfQU5EX01BTkFHRV9OR1MiLCJBQ0NFU1NfQU5EX01BTkFHRV9LQUFTIiwiQUNDRVNTX0FORF9NQU5BR0VfTkVUV09SS19GSUxFX1NUT1JBR0UiLCJBQ0NFU1NfQU5EX01BTkFHRV9BSV9NT0RFTF9IVUIiLCJDUkVBVEVfTkVUV09SS19TRUNVUklUWV9HUk9VUFMiLCJBQ0NFU1NfQU5EX01BTkFHRV9JQU1fUkVTT1VSQ0VTIl0sInV1aWQiOiI3YmNiNzg4MS1hZDMxLTQxMDgtOGI3Zi0wOGIyNjdiYTI0ZWUiLCJyZXNlbGxlcklkIjoxLCJyZWdEb21haW4iOiJpb25vcy5jb20iLCJyb2xlIjoib3duZXIiLCJjb250cmFjdE51bWJlciI6MzM5NzEwMzMsImlzUGFyZW50IjpmYWxzZX0sImV4cCI6MTc0NTQyNTcxMH0.eIma7PTWouzDKv6VBR-zqxVEUhw_bBeO3x0JIDbcEjn-ciPUOULROmXVcTwSeYEfUPaSip64qQnPqSZTYaDoX0cHnarr5guu618gBELxTfw7VtQhAx4TM4RPhvoQKotC5u2pc8-ahZI8XdJstmja9bAitYATjmaSa6WIGVzlhgA2ZDzjn1js7YvqG5OcMjVeUA2CxsxSTTXwVMaPvC2W-Q_baeoGH2LZqrCC8kXTdVvRlNSIv-HEyakqivV0YjNXoOlf5F5-ldooYOkc5xNN7UMs54TqIPZwjH931WOdYL6G0dv6e6g1wo-A0iLHAdHc_x21wRiQAujtNmifxtVQYw
+LANGSMITH_PROJECT=pr-gargantuan-advertising-20
+
+(set up backend) 
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated/backend
+source ../venv/bin/activate
+pip install flask python-dotenv requests
+pip install flask-cors
+python3 api.py
+
+
+
+(activate main)
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated
+python3 -m venv venv
+python3 main.py
+
+
+(activate back end)
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated/backend
+source ../venv/bin/activate
+python3 api.py
+
+(set up mobile)
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated/LangChainMobile
+npm install -g expo-cli
+npx expo install expo-linear-gradient
+npx expo install expo-speech expo-speech-to-text
+npx expo install expo-speech expo-media-library
+
+
+
+(run mobile)
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated
+expo init LangChainMobile
+
+cd /Users/Zay/Desktop/LangChain_Project_Updated/LangChainMobile
+npm start
+expo start
+
+
+
+
+
+
+
+
+
+
+
+might be for an older version - dont use!!!!!
+
+cd /Users/Zay/Desktop/LangChain_Assistant_Revamp
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
